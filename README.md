@@ -38,3 +38,4 @@ Recompiling avrdude requires cmake, which is too old in the distro. There are
 two alternatives using [Tinkerboard C GPIO
 lib](https://github.com/TinkerBoard/gpio_lib_c) or [Tinkerboard Python GPIO lib](https://github.com/TinkerBoard/gpio_lib_python) (make sure not to try to run any code from inside the GitHub clone of the Python repo as it will fail importing ASUS.GPIO due to scope confusion). Use the GPIO.ASUS ids with the GPIO entries in `/sys/class/gpio/`. The Python version seems to work with a simple example. The C version fails at install script (trying to remove an existing wiringPi install???). To be further investigated...
 
+The following are enabled via the Tinkerboard desktop: UART1,3,4; I2C1,4; SPI2. GPIO17 seems to be preferred for RESET pin and the SPI2 pins are to the SPI bus to ATTiny841.
